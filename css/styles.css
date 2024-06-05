@@ -53,12 +53,6 @@ nav ul li a:hover {
     transform: scale(1.1); /* Apply the scaling effect */
 }
 
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
 .slider{
     width: 100%;
     margin: auto;
@@ -201,8 +195,15 @@ footer {
     align-items: center;
     justify-content: center;
 }
+.order-details{
+    font-size: small;
+    padding: 0 20px;
+}
+.order-details p{
+    margin-bottom: -10px;
+}
 
-.order-details, .order-items, .order-pricing {
+ .order-items, .order-pricing {
     margin-bottom: 20px;
     padding: 0 20px;
 }
@@ -287,4 +288,9 @@ footer {
     nav ul li a {
         font-size: 16px;
     }
+    .order-details{
+        font-size: medium;
+        padding: 0 20px;
+    }
+  
 }
