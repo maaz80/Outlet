@@ -9,13 +9,16 @@ header {
     background-color: #16a290;
     color: #fff;
 }
-nav{
-    display: flex ;
+
+/* Navigation styles */
+nav {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 7px 10px;
+    position: relative;
 }
+
 .logo{
     display: flex ;
     align-items: center;
@@ -28,28 +31,41 @@ nav{
     border-radius: 10px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
- 
-}
 
-nav ul li {
-    display: inline-block;
-    margin-right: 10px;
+/* Navigation menu styles */
+nav ul {
+    display: none;
+    position: absolute;
+    top: 46px;
+    right: 0;
+    background-color: white;
+    width: 40vw;
+    box-shadow: -10px 10px 10px lightblue;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    padding: 7px 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 13px;
-    color: inherit;
-    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
+    color: black;
+    border-bottom: 1px solid gray;
+    display: inline-block;
+}
+.menu-toggle{
+    background-color: transparent;
+    border: none;
+    color:white;
+    font-size: 22px;
 }
 
-nav ul li a:hover {
-    color: #333;
-    transform: scale(1.1); /* Apply the scaling effect */
+nav ul.show {
+    display: flex;
 }
+
 
 .Details{
     width: 90%;
@@ -140,7 +156,39 @@ color: white;
 .logo h1{
     font-size: 27px;
 }
-nav ul li a {
-    font-size: 16px;
+nav ul {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    box-shadow: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    display: flex; /* Ensure the menu is displayed on larger screens */
 }
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    color: inherit;
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
+}
+
+nav ul li a:hover {
+    color: #333;
+    transform: scale(1.1); /* Apply the scaling effect */
+}
+.menu-toggle{
+    display: none;
+}
+
+
 }

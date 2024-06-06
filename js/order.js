@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("customer-email").textContent = email;
     document.getElementById("customer-number").textContent = number;
     document.getElementById("customer-address").textContent = address;
-
-    // Display order date and time
     document.getElementById("order-date").textContent = orderDate.toLocaleString();
 
     // Calculate and display how long ago the order was placed

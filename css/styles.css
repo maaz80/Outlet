@@ -30,28 +30,40 @@ nav{
     font-size: 17px;
 }
 
+/* Navigation menu styles */
 nav ul {
-    list-style-type: none;
-    padding: 0;
- 
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 10px;
+    display: none;
+    position: absolute;
+    top: 46px;
+    right: 0;
+    background-color: white;
+    width: 40vw;
+    box-shadow: -10px 10px 10px lightblue;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    padding: 7px 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 13px;
-    color: inherit;
-    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
+    color: black;
+    border-bottom: 1px solid gray;
+    display: inline-block;
+}
+.menu-toggle{
+    background-color: transparent;
+    border: none;
+    color:white;
+    font-size: 22px;
 }
 
-nav ul li a:hover {
-    color: #333;
-    transform: scale(1.1); /* Apply the scaling effect */
+nav ul.show {
+    display: flex;
 }
+
 
 .slider{
     width: 100%;
@@ -203,12 +215,28 @@ footer {
     margin-bottom: -10px;
 }
 
- .order-items, .order-pricing {
+ .order-items {
     margin-bottom: 20px;
     padding: 0 20px;
 }
+.order-pricing{
+    padding-left: 17px;
+}
+.order-pricing h2{
+    width: 90%;
+    border-bottom:2px solid #ddd ;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.finalprice{
+    width: 90%;
+    border-top:2px solid #ddd ;
+    margin-top: 10px;
+    padding-top: 5px;
 
-.order-details h2, .order-items h2, .order-pricing h2 {
+}
+
+.order-details h2, .order-items h2 {
     margin-bottom: 10px;
     border-bottom: 2px solid #ddd;
     padding-bottom: 5px;
@@ -285,12 +313,43 @@ footer {
     .product{
         width: 25%;
     }
-    nav ul li a {
-        font-size: 16px;
-    }
     .order-details{
         font-size: medium;
         padding: 0 20px;
     }
+    
   
+    nav ul {
+        position: static;
+        background-color: transparent;
+        width: auto;
+        box-shadow: none;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+        display: flex; /* Ensure the menu is displayed on larger screens */
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        border: none;
+        font-size: 16px;
+        color: inherit;
+        transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
+    }
+
+    nav ul li a:hover {
+        color: #333;
+        transform: scale(1.1); /* Apply the scaling effect */
+    }
+    .menu-toggle{
+        display: none;
+    }
 }
