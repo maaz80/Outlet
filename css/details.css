@@ -40,7 +40,7 @@ nav ul {
     right: 0;
     background-color: white;
     width: 40vw;
-    box-shadow: -10px 10px 10px lightblue;
+    box-shadow: -4px 5px 10px lightblue;
     list-style: none;
     flex-direction: column;
     justify-content: center;
