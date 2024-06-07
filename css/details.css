@@ -1,3 +1,5 @@
+/* detail.css  */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,6 +10,11 @@ body {
 header {
     background-color: #16a290;
     color: #fff;
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 /* Navigation styles */
@@ -17,6 +24,7 @@ nav {
     justify-content: space-between;
     padding: 7px 10px;
     position: relative;
+    width: 100%;
 }
 
 .logo{
@@ -36,7 +44,7 @@ nav {
 nav ul {
     display: none;
     position: absolute;
-    top: 46px;
+    top: 40px;
     right: 0;
     background-color: white;
     width: 40vw;
